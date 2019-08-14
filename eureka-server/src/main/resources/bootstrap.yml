@@ -1,0 +1,20 @@
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
+  application:
+    name: eureka-server
+
+---
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles:
+    active: s1
+---
+spring:
+  profiles:
+    active: s2

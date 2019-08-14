@@ -1,0 +1,10 @@
+server:
+  port: 8761
+eureka:
+  client:
+#    fetch-registry: false
+#    register-with-eureka: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@server2:8762/eureka/
+  instance:
+    hostname: server1

@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          username:
+          password:
+          uri: https://github.com/Chris-Altair/springcloud-study/
+          search-paths: config-profiles # 文件所在路径
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@server1:8761/eureka/,http://admin:123456@server2:8762/eureka/
