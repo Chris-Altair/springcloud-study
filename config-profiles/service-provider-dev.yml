@@ -1,6 +1,17 @@
 test-bus: Alice1 # 用于测试消息总线bus
 server:
   port: 8000
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 eureka:
   client:
     service-url:
