@@ -1,0 +1,12 @@
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
+eureka:
+  server:
+    enable-self-preservation: false # 关闭自我保护
+    eviction-interval-timer-in-ms: 3000 # 每隔3s清理服务列表
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 续约更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 20 # 续约到期时间（默认90秒）
