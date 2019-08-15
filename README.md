@@ -1,4 +1,4 @@
-#springcloud学习
+# springcloud学习
 * config-profiles   分布式配置仓库
 * config-server     配置中心
 * gateway-zuul      路由网关  
