@@ -6,5 +6,7 @@ eureka:
 #    register-with-eureka: false
     service-url:
       defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@server2:8762/eureka/
+    healthcheck:
+      enabled: true # 默认开启健康检查 （需要spring-boot-starter-actuator依赖）
   instance:
     hostname: server1
