@@ -1,5 +1,13 @@
 server:
   port: 8769
+zuul:
+  routes:
+    api-sp: # 负载均衡默认是轮训方式
+      path: /api-sp/**
+      serviceId: service-provider
+    api-sf:
+      path: /api-sf/**
+      serviceId: service-feign
 eureka:
   client:
     service-url:
