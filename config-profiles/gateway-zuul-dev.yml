@@ -8,6 +8,12 @@ zuul:
     api-sf:
       path: /api-sf/**
       serviceId: service-feign
+spring:
+  rabbitmq: # 消息总线需要
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:

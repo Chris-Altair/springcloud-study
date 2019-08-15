@@ -3,6 +3,12 @@ server:
 feign:
   hystrix:
     enabled: true # 开启断路由
+spring:
+  rabbitmq: # 消息总线需要
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
