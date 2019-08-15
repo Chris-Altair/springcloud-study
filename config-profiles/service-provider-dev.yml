@@ -1,4 +1,4 @@
-test-bus: Alice1 # 用于测试消息总线bus
+test-bus: Alice # 用于测试消息总线bus
 server:
   port: 8000
 spring:
