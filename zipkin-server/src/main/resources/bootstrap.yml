@@ -1,21 +1,7 @@
-zipkin:
-  collector:
-    rabbitmq:
-      addresses: 127.0.0.1
-      port: 5672
-      username: guest
-      password: guest
-  storage:
-    StorageComponent: elasticsearch
-    elasticsearch:
-      cluster: elasticsearch
-      hosts: 127.0.0.1:9200
-      index-replicas: 1
-      index-shards: 5
-    type: elasticsearch
-
-management:
-  metrics:
-    web:
-      server:
-        auto-time-requests: false
+spring:
+  application:
+    name: zipkin-server
+  cloud:
+    config: # 注意使用分布式配置中心的配置文件前缀必须和spring.application.name一致！！！
+      profile: dev # 调用分布式配置中心的service-provider-dev文件
+      uri: http://localhost:8888/ # 分布式配置中心
