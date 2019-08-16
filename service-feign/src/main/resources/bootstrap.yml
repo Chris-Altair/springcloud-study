@@ -9,6 +9,9 @@ spring:
       enabled: true
       trace:
         enabled: true
+  zipkin:
+    sender:
+      type: web
 management:
   endpoints:
     web:
